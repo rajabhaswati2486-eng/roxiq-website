@@ -526,7 +526,7 @@ body{min-height:100vh;min-height:100dvh;
    data is firestore.rules: the `certificates` collection only ever
    accepts writes from an admin session; this page only ever reads. */
 const firebaseConfig = {
-  apiKey: "AIzaSyDyk6Qe-1t44wloKyrXEZK8Csp95-_xvCg",
+  apiKey:  "AIzaSyDyk6Qe-1t44wloKyrXEZK8Csp95-_xvCg",
   authDomain: "roxiq-f8442.firebaseapp.com",
   projectId: "roxiq-f8442",
   storageBucket: "roxiq-f8442.firebasestorage.app",
@@ -578,6 +578,7 @@ function toDisplayCert(certId, c) {
     rank: c.rank != null ? c.rank : '—',
     dateIssued: issuedDate.toLocaleDateString('en-IN'),
     photo: null,
+    isSample: !!c.isSample,
   };
 }
 
@@ -731,6 +732,7 @@ function renderScan(id){
 }
 
 function renderGranted(ok){
+  const sampleSub = (DEMO && DEMO.isSample) ? 'DEMO CERTIFICATE — FOR ILLUSTRATION ONLY' : 'ACCESS GRANTED — OPENING THE VAULT';
   $scan.innerHTML = ok ? `
     <div class="hudbox">
       <span class="hud-c hud-tl"></span><span class="hud-c hud-tr"></span>
@@ -741,7 +743,7 @@ function renderGranted(ok){
               stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="gtxt">VERIFICATION COMPLETE</div>
-      <div class="gsub">ACCESS GRANTED — OPENING THE VAULT</div>
+      <div class="gsub">${sampleSub}</div>
     </div>` : `
     <div class="hudbox" style="border-color:rgba(192,80,90,.4)">
       <span class="hud-c hud-tl" style="border-color:#c0505a"></span>
@@ -781,7 +783,7 @@ function renderCert(){
     <div class="tiltwrap" id="tiltwrap">
     <div class="tilt" id="tilt">
     <div class="card">
-      <div class="stamp">VERIFIED</div>
+      <div class="stamp">${d.isSample ? 'SAMPLE' : 'VERIFIED'}</div>
       <div class="cert-title">CERTIFICATE</div>
       <div class="cert-subtitle">OF QUALIFICATION</div>
       <div class="card-orna"><i></i></div>
