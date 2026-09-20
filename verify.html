@@ -526,12 +526,12 @@ body{min-height:100vh;min-height:100dvh;
    data is firestore.rules: the `certificates` collection only ever
    accepts writes from an admin session; this page only ever reads. */
 const firebaseConfig = {
-  apiKey: AIzaSyDyk6Qe-1t44wloKyrXEZK8Csp95-_xvCg,
-  authDomain: roxiq-f8442.firebaseapp.com,
-  projectId: roxiq-f8442
-  storageBucket: roxiq-f8442.firebasestorage.app
-  messagingSenderId: 1034905333873
-  appId: 1:1034905333873:web:672959af98ce955d4c2bd0
+  apiKey: "AIzaSyDyk6Qe-1t44wloKyrXEZK8Csp95-_xvCg",
+  authDomain: "roxiq-f8442.firebaseapp.com",
+  projectId: "roxiq-f8442",
+  storageBucket: "roxiq-f8442.firebasestorage.app",
+  messagingSenderId: "1034905333873",
+  appId: "1:1034905333873:web:672959af98ce955d4c2bd0",
 };
 firebase.initializeApp(firebaseConfig);
 const firestoreDb = firebase.firestore();
