@@ -175,6 +175,17 @@ a{text-decoration:none;color:inherit}img{max-width:100%}
   letter-spacing:var(--h2-track);color:var(--h1-color);line-height:1.15}
 .lx-dlmain .lx-lede{margin-top:14px;font-size:14.5px;line-height:1.75;color:var(--body-dim);max-width:540px;font-style:var(--sub-style)}
 .lx-dlbtns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;align-items:center}
+.lx-stats{display:flex;flex-wrap:wrap;align-items:stretch;margin-top:24px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lx-stat{flex:1 1 auto;min-width:150px;padding:16px 20px;border-right:1px solid var(--line)}
+.lx-stat:last-child{border-right:none}
+.lx-stat-v{display:block;font-family:var(--font-disp);font-size:22px;font-weight:700;
+  color:var(--gold);letter-spacing:1px;line-height:1.15}
+.lx-stat-l{display:block;font-size:10px;color:var(--muted);letter-spacing:2.4px;
+  text-transform:uppercase;margin-top:6px}
+.lx-stats-hero{max-width:660px;margin-left:auto;margin-right:auto;text-align:left}
+@media(max-width:620px){.lx-stat{border-right:none;border-bottom:1px solid var(--line)}
+  .lx-stat:last-child{border-bottom:none}}
 .lx-install{margin-top:18px;font-size:11px;color:var(--muted);line-height:1.85;max-width:540px}
 .lx-install b{color:var(--gold)}
 /* terms */
@@ -358,7 +369,11 @@ summary{font-style:italic}
     <div class="lx-chips rv d2"><span>FREE FIRE</span><span>PUBG</span><span>ANNUAL CHAMPIONSHIPS</span><span>OFFICIAL CERTIFICATES</span></div>
     <div class="lx-cta rv d3">
       <a class="lx-btn lx-big" href="Roxiq-v1.0.apk" download"><svg viewBox="0 0 24 24"><path d="M12 3v10.55l4-4 1.5 1.5L12 17.5 6.5 11.05 8 9.55l4 4V3zM5 19h14v2H5z"/></svg> DOWNLOAD THE APP</a>
-      <p class="lx-meta">Android &middot; free to download &middot; roxiq.app</p>
+      <div class="lx-stats lx-stats-hero">
+        <span class="lx-stat"><span class="lx-stat-v">200,000+</span><span class="lx-stat-l">Downloads</span></span>
+        <span class="lx-stat"><span class="lx-stat-v">28</span><span class="lx-stat-l">States</span></span>
+        <span class="lx-stat"><span class="lx-stat-v">2026</span><span class="lx-stat-l">Season</span></span>
+      </div>
     </div>
   </div>
 </header>
@@ -459,6 +474,11 @@ summary{font-style:italic}
       <div class="lx-dlbtns">
         <a class="lx-btn lx-big" href="Roxiq-v1.0.apk" download><svg viewBox="0 0 24 24"><path d="M12 3v10.55l4-4 1.5 1.5L12 17.5 6.5 11.05 8 9.55l4 4V3zM5 19h14v2H5z"/></svg> DOWNLOAD APK</a>
         <span class="lx-meta">Play Store &mdash; coming soon</span>
+      </div>
+      <div class="lx-stats">
+        <span class="lx-stat"><span class="lx-stat-v">200,000+</span><span class="lx-stat-l">Downloads</span></span>
+        <span class="lx-stat"><span class="lx-stat-v">28</span><span class="lx-stat-l">States</span></span>
+        <span class="lx-stat"><span class="lx-stat-v">2026</span><span class="lx-stat-l">Season</span></span>
       </div>
       <p class="lx-install"><b>Install note:</b> open the downloaded file &rarr; allow &ldquo;install from this
          source&rdquo; if asked &rarr; launch ROXIQ. Download <b>only from roxiq.app</b> &mdash;
